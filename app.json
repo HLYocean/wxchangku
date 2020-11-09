@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/channel/channel",
+    "pages/play/play",
+    "pages/detail/detail",
+    "pages/search/search"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "推荐"
+      },
+      {
+        "pagePath": "pages/channel/channel",
+        "text": "频道"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "场库",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "enablePullDownRefresh": true
+}

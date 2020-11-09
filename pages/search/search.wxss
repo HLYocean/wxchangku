@@ -1,0 +1,40 @@
+/* pages/search/search.wxss */
+.search .weui-input {
+  margin: 0 auto;
+  border-radius: 5px;
+  width: 96%;
+  text-align: center;
+  height: 30px;
+  font-size: 14px;
+  color: #000;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+}
+
+.list {
+  position: relative;
+  display: flex;
+  float: left;
+  width: 50vw;
+  height: 50vw;
+  justify-content: center;
+  align-items: center;
+}
+
+
+image {
+  width: 100%;
+  filter: brightness(0.8);
+}
+
+.text {
+  height: 468rpx !important;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  left: 10px;
+  bottom: 20px;
+  color: #fff;
+}

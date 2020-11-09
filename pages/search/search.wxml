@@ -1,0 +1,12 @@
+<!--pages/search/search.wxml-->
+<view class="search">
+  <input class="weui-input" maxlength="10" bindblur="bindKeyInput" placeholder="搜索精彩短片" />
+
+  <view wx:key="selection_title" wx:for="{{list}}" class="list_title">
+      <view bindtap="toDetail" data-item="{{item}}" wx:key="postid" class="text">
+        <image mode="widthFix" src="{{item.image}}"></image>
+        <view class="title">{{item.title}}</view>
+      </view>
+    </view>
+
+</view>

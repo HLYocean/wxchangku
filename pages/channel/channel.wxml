@@ -1,0 +1,9 @@
+<!--pages/channel/channel.wxml-->
+
+<view wx:for="{{list}}" class="list" data-item="{{item.catename}}" bindtap="toList" data-alias="{{item.alias}}"
+    wx:key="key" data-in="{{item}}">
+    <image src="{{item.icon}}" />
+    <text>
+        {{item.catename}}
+    </text>
+</view>

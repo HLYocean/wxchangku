@@ -1,0 +1,16 @@
+<!--pages/play/play.wxml-->
+
+<view wx:for="{{list}}" wx:key="key" data-item="{{item}}" class="list" bindtap="toDetail">
+    <image src="{{item.image}}" />
+    <text>
+        {{item.cates[0].catename}} / {{foo.t(item.duration)}}
+    </text>
+    <view class="text">
+        {{item.title}}
+    </view>
+    <wxs module="foo">
+        var t = function (time) {
+            var m = parseInt(time / 60) < 10 ? '0' + parseInt(time / 60) : parseInt(time / 60); var s = parseInt(time % 60) <
+                10 ? '0' + parseInt(time % 60) : parseInt(time % 60); return m + ':' + s
+        }; module.exports.t = t; </wxs>
+</view>

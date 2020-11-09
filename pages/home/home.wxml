@@ -1,0 +1,39 @@
+<!--pages/home/home.wxml-->
+<view class="home">
+  <input class="weui-input" maxlength="10" bindtap="bindKeyInput" placeholder="搜索精彩短片" />
+  <view class="banner" wx:if="banner">
+    <swiper indicator-dots="{{true}}" autoplay="{{true}}">
+      <block wx:for="{{banner}}" wx:key="*this">
+        <swiper-item>
+          <image mode="widthFix" src="{{item.image}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='contentBottom' wx:if="list">
+    {{list[0].selection_title}}
+    <view wx:key="selection_title" wx:for="{{list}}" class="list_title">
+      <view class="selection_title">
+        {{item.selection_title}}
+      </view>
+      <view bindtap="toDetail" data-item="{{item}}" wx:key="postid" class="text" wx:for='{{item.list}}'>
+        <image mode="widthFix" src="{{item.image}}"></image>
+        <view class="title">{{item.title}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='contentBottom' wx:if="morelist">
+    {{list[0].selection_title}}
+    <view wx:key="index" wx:for="{{morelist}}" class="list_title">
+      <view class="selection_title">
+        {{item.selection_title}}
+      </view>
+      <view bindtap="toDetail" data-item="{{item}}" wx:key="postid" wx:for="{{item.list}}" class="text">
+        <image mode="widthFix" src="{{item.image}}"></image>
+        <view class="title">{{item.title}}</view>
+      </view>
+    </view>
+  </view>
+
+</view>
