@@ -13,7 +13,7 @@ Page({
         wx.navigateTo({
             url: '/pages/detail/detail',
             success: function(res) {
-  
+
               //通过eventChannel向B页面发送数据。
               res.eventChannel.emit('acceptDataFromA', {data: e.currentTarget.dataset['item']})
               }
@@ -23,6 +23,8 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+
+
 
     },
 
